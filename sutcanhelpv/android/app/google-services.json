@@ -1,0 +1,89 @@
+{
+  "project_info": {
+    "project_number": "233996474656",
+    "firebase_url": "https://sutcanhelp.firebaseio.com",
+    "project_id": "sutcanhelp",
+    "storage_bucket": "sutcanhelp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233996474656:android:6921e2204bb97057401f45",
+        "android_client_info": {
+          "package_name": "com.example.sutcanhelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233996474656-6pusa2be1ujlqvp7hkkk0mbab5q2rj84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiAB2XrlQLrwJXmHmEpPbHBRrKpv0UMUk"
+        },
+        {
+          "current_key": "AIzaSyCpLviaiZbfhsvgAIXVE4ShAMM1CrYu2Xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233996474656-6pusa2be1ujlqvp7hkkk0mbab5q2rj84.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "233996474656-bthi320q6lb8mbbeajo3dfv5ao4qucq6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.project.sutcan"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233996474656:android:70cfad4b9d44a41f401f45",
+        "android_client_info": {
+          "package_name": "com.example.sutcanhelpv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233996474656-6pusa2be1ujlqvp7hkkk0mbab5q2rj84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiAB2XrlQLrwJXmHmEpPbHBRrKpv0UMUk"
+        },
+        {
+          "current_key": "AIzaSyCpLviaiZbfhsvgAIXVE4ShAMM1CrYu2Xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233996474656-6pusa2be1ujlqvp7hkkk0mbab5q2rj84.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "233996474656-bthi320q6lb8mbbeajo3dfv5ao4qucq6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.project.sutcan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
