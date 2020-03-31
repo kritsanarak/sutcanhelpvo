@@ -38,6 +38,7 @@ dependencies:
   firebase_messaging: ^6.0.9
   flutter_app_badger: ^1.1.2
   flutter_local_notifications: ^1.1.6
+  map_launcher: ^0.4.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:sutcanhelpv/jobs.dart';
 import 'package:sutcanhelpv/profile.dart';
 import 'package:sutcanhelpv/home.dart';
 import 'dart:async';
@@ -9,14 +8,14 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:map_launcher/map_launcher.dart';
 
-class AppHome extends StatefulWidget {
+class Jobs extends StatefulWidget {
   @override
-  _AppHomeState createState() => _AppHomeState();
+  _JobsState createState() => _JobsState();
 }
 
-class _AppHomeState extends State<AppHome> {
+class _JobsState extends State<Jobs> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  Widget page = AppHome();
+  Widget page = Jobs();
   String emailLogin = 'TEST';
   String name = '';
   String uids = '';
@@ -145,7 +144,7 @@ class _AppHomeState extends State<AppHome> {
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
-    // setState to update our nonexistent appearance.
+    // setState to update our non-existent appearance.
     if (!mounted) return;
 
     setState(() {
@@ -191,7 +190,7 @@ class _AppHomeState extends State<AppHome> {
           });
         });
   }
-   Widget showJobs() {
+  Widget showJobs() {
     return ListTile(
         leading: Icon(Icons.person),
         title: Text(
@@ -380,7 +379,7 @@ class _AppHomeState extends State<AppHome> {
         drawer: showDrawer(),
         drawerScrimColor: Colors.white,
         body: StreamBuilder(
-            stream: Firestore.instance.collection('SOS').snapshots(),
+            stream: Firestore.instance.collection('AcceptSOS').where('Volunteer', isEqualTo: uids).snapshots(),
             builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
               if (!snapshot.hasData) {
                 const Text('Loading');
@@ -388,6 +387,7 @@ class _AppHomeState extends State<AppHome> {
                 return ListView.builder(
                   itemCount: snapshot.data.documents.length,
                   itemBuilder: (context, index) {
+                  
                    DocumentSnapshot sos = snapshot.data.documents[index];
                    
                     return Stack(
@@ -420,18 +420,9 @@ class _AppHomeState extends State<AppHome> {
                                     SizedBox(height: 10.0,),
                                     RaisedButton(color: Colors.green,child: Text('รับงาน'),
                                     onPressed: () { 
-                                    print('${sos.documentID}');
+                                    
                                     openMapsSheet(context,sos['Position'],);
-                                    var detail = sos['Detail'];
-                                    var image1 = sos['ImageSOS_1'];
-                                    var image2 = sos['ImageSOS_2'];
-                                    var image3 = sos['ImageSOS_3'];
-                                    var position = sos['Position'];
-                                    var timestamp = sos['Timestamp'];
-                                    var user = sos['User'];
-                                    var symptom = sos['อาการ'];
-                                    var id = sos.documentID;
-                                    setupUser(detail,image1,image2,image3,position,timestamp,user,symptom,id);
+                                    
                                     
                                     }
                                     )
@@ -443,6 +434,7 @@ class _AppHomeState extends State<AppHome> {
                         )
                       ],
                     );
+                   
                   },
                 );
               }
